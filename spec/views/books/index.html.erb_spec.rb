@@ -18,8 +18,8 @@ RSpec.describe "books/index", type: :view do
 
   it "renders a list of books" do
     render
-    assert_select "tr>td", text: "Title".to_s, count: 2
-    assert_select "tr>td", text: "Author".to_s, count: 2
-    assert_select "tr>td", text: "MyText".to_s, count: 2
+    assert_select "p", text: /Title/, count: 2
+    assert_select "p", text: /Author/, count: 2
+    assert_select "p", text: /MyText/, count: 2
   end
 end
